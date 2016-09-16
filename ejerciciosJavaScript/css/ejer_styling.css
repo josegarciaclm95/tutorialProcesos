@@ -1,0 +1,40 @@
+body{
+    background: #acf2d1;
+    font-family: 'Open Sans',Trebuchet MS,Arial,sans-serif;
+    font-size: 1em;
+}
+
+#ejercicios{
+    padding: 0px 40px ;
+    margin-right: 40px;
+}
+
+/*
+li{
+    list-style: none;
+    padding: 0px 20px;
+    width: 20%;
+}
+*/
+
+ul {
+    text-align: justify;
+}
+ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ul:before {
+    content: '';
+    display: block;
+    margin-top: -1.25em;
+}
+li {
+    display: inline-block;
+    margin-right: -.25em;
+    position: relative;
+    top: 1.25em;
+    width: 30%;
+    padding-bottom: 10px;
+}
