@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/ejer_styling.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script type="text/javascript">
 		function factorial(num)
 		{
@@ -13,17 +15,18 @@
 			*/
 			return fac;
 		}
-		alert(factorial(6));
-
-		/* Otro modo de declarar funciones
-		var factorial=function(num){
+		var res = factorial(6)
+		alert(res);
+		document.write("La función declara ha devuelto " + res + ". Llamamos a función en variable<br/>");
+		
+		var factorial2 = function(num){
 			var fac=1;
 			for(num;num>0;num--)
 				fac=num*fac;
 			alert(fac);
-		}
-		factorial(3);
-		*/
+			document.write("La función en variable ha calculado " + fac + ".<br/>");
+		}		
+		factorial2(3);
 	</script>
 </head>
 <body>

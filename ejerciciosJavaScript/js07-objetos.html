@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<title>Objetos</title>
 	<script type="text/javascript">
 		var gato = new Gato("peludo");
@@ -9,8 +11,13 @@
 			this.nombre=nombre;
 		}
 		alert(gato.nombre);
+		document.write("Resultado de imprimir atributo de objeto gato: " + gato.nombre + ".<br/>");
 		alert(gato);
-
+		document.write("Resultado de imprimir el objeto gato: " + gato + ".<br/>");
+		Gato.prototype.toString = function() {
+			return "Gato de nombre " + this.nombre;
+		}
+		document.write("Resultado de imprimir el objeto gato tras sobrescribir toString: " + gato + ".<br/>");
 		//Comprueba el objeto en la consola del navegador
 	</script>
 </head>

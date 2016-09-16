@@ -2,19 +2,27 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/ejer_styling.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script type="text/javascript">
-	var cierto=true;
-	var asignada=cierto?'hola':'adios';
-	alert(asignada);
-	/*
-	switch(variable)
-	{	case 1: codigo
-			break;
-		case 2: codigo
-			break;
-		default:
-		}
-	*/
+		var cierto=true;
+		var asignada=cierto?'hola':'adios';
+		alert(asignada);
+		document.write("Ha mostrado \'hola\', cambiamos a false <br/>");
+		cierto = false;
+		asignada=cierto?'hola':'adios';
+		alert(asignada);
+		document.write("Ha mostrado \'adios\'");
+
+		/*
+		switch(variable)
+		{	case 1: codigo
+				break;
+			case 2: codigo
+				break;
+			default:
+			}
+		*/
 	</script>
 </head>
 <body></body>
