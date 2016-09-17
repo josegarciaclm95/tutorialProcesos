@@ -1,8 +1,16 @@
 <html>
 <head>
-	<title></title>
+	<title>Objetos</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/ejer_styling.css">
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+</head>
+<body>
+<p>Hay varias formas de definir un objeto en javascript.</p>
+<ol>
+	<li>1. Llamando al constructor object y añadiendo atributos mediante la notación punto.</li>
 	<script type="text/javascript">
-		//1-Definir un objeto
+	//1-Definir un objeto
 		var oEmp1 = Object();
 		oEmp1.numero = 1001;
 		oEmp1.nombre = "Pepe";
@@ -11,16 +19,28 @@
 		//Comprueba la variable oEmp1 en la consola del navegador
 		//comprueba el objeto completo y comprueba las propiedades utilizando
 		//la notacion punto y notacion de array asociativo 
-
-		//2-Otro modo de definir objetos
+		alert("Acceso a atributos usando notación punto.");
+		alert("Objeto oEmp1, Numero: " + oEmp1.numero + ", Nombre: " + oEmp1.nombre + ", Salario: " + oEmp1.salario + "Teléfono: " + oEmp1.tlfn);
+		alert("Acceso a atributos usando notación array asociativo");
+		alert("Objeto oEmp1, Numero: " + oEmp1["numero"] + ", Nombre: " + oEmp1["nombre"] + ", Salario: " + oEmp1["salario"] + "Teléfono: " + oEmp1["tlfn"]);
+	</script>
+	<li>2. Creando un array asociativo vacio (mediante {}) y añadir los atributos mediante la notación correspondiente.</li>
+	<script type="text/javascript">
+	//2-Otro modo de definir objetos
 		var oEmp2 = {};
 		oEmp2.numero = 1002;
 		oEmp2.nombre = "Lola";
 		oEmp2.salario = 8000;
 		oEmp2.tlfn = "2222221";
 		//Comprueba la variable oEmp1 y oEmp2 en la consola del navegador
-
-		//3-Un tercer modo de crear objetos
+		alert("Acceso a atributos usando notación punto.");
+		alert("Objeto oEmp2, Numero: " + oEmp2.numero + ", Nombre: " + oEmp2.nombre + ", Salario: " + oEmp2.salario + "Teléfono: " + oEmp2.tlfn);
+		alert("Acceso a atributos usando notación array asociativo");
+		alert("Objeto oEmp2, Numero: " + oEmp2["numero"] + ", Nombre: " + oEmp2["nombre"] + ", Salario: " + oEmp2["salario"] + "Teléfono: " + oEmp2["tlfn"]);
+	</script>
+	<li>3. Rellenando directamente el array asociativo (ar = {key:value, key2:value2...})</li>
+	<script type="text/javascript">
+	//3-Un tercer modo de crear objetos
 		var oEmp3 = {
 		numero : 1003,
 		nombre : "Luisito",
@@ -28,7 +48,11 @@
 		tlfn : "2222220"
 		};
 		//Comprueba las variables en la consola del navegador
-
+		alert("Acceso a atributos usando notación punto.");
+		alert("Objeto oEmp3, Numero: " + oEmp3.numero + ", Nombre: " + oEmp3.nombre + ", Salario: " + oEmp3.salario + "Teléfono: " + oEmp3.tlfn);
+		alert("Acceso a atributos usando notación array asociativo");
+		alert("Objeto oEmp3, Numero: " + oEmp3["numero"] + ", Nombre: " + oEmp3["nombre"] + ", Salario: " + oEmp3["salario"] + "Teléfono: " + oEmp3["tlfn"]);
+		
 		//Supongamos que tenemos un objeto con muchas propiedades
 		//queremos acceder a las propiedades de ese objeto
 		//para ello usamos el for in para recorrer el objeto
@@ -37,8 +61,7 @@
 			alert(p + " = "+oEmp3[p]);
 		}
 	</script>
-</head>
-<body>
-
+	<li></li>
+</ol>
 </body>
 </html>

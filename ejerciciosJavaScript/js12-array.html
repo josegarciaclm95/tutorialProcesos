@@ -5,12 +5,9 @@
     <link rel="stylesheet" href="css/ejer_styling.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
-		
 		//1-definir un array
 		var a=[2,26,38,12,6,8];
 		alert("Size " + a.length + " -> " + a);
-		
-
 		
 		//2-funcion every
 		function esPar(v,i,array){
@@ -18,17 +15,12 @@
 		}
 		var a=[2,26,38,12,6,8];
 		alert(a.every(esPar));
-		//Comprueba el resultado para diferentes valores de a
-		
-		
-		
+		//Comprueba el resultado para diferentes valores de a	
 		//3-Ahora como funcion anonima
 		alert([2,26,38,12,7,8].every(
 			function (v,i,array){
 			return(v%2==0)?true:false;
 		}));
-		
-
 	</script>
 </head>
 <body>

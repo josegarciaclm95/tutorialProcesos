@@ -1,6 +1,9 @@
 <html>
 <head>
-	<title></title>
+	<title>Object Orientes Programming</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/ejer_styling.css">
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<meta charset="utf-8">
 	<script>
 		var ary=[];
@@ -15,19 +18,22 @@
 		ary["Salario"]=4000;
 		ary["Telefono"]="967453535";
 
-		alert("Nombre: "+ary["Nombre"]);
+		alert("Atributo accedido de forma normal hasta ahora -> Nombre: "+ary["Nombre"]);
 
 		//comprueba la variable ary en la consola
 		//por ejemplo: ary.Numero
 		//esa notación solo es válida para arrays asociativos
 
-		alert("Usando la notación punto: "+ary.Nombre);
+		alert("Atributo accedido usando la notación punto: "+ary.Nombre);
 
 		//En Javascript los objetos son arrays asociativos
 
 	</script>
 </head>
 <body>
-
+	<p>Javascript dispone de una clase de array que se indexa por keys en lugar de por la posición del elemento en el array.
+		Podemos acceder a los elementos de un array de este tipo como hemos hecho hasta ahora (array["key"]) o refiriéndonos a las keys
+		como si fueran los atributos del array, array.key (esta última notación solo vale para arrays asociativos.)
+	</p>
 </body>
 </html>

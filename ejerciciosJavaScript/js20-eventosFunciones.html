@@ -1,7 +1,10 @@
 <html>
 <head>
-	<title></title>
-	<script>
+	<title>Eventos y funciones</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<script type="text/javascript">
 		function attachEvent(){
 			var btn=document.getElementById("btn");
 			if (btn){
@@ -16,5 +19,8 @@
 <body>
 <input id="btn" type="button" value="Boton no funcional" />
 <input id="btn2" type="button" value="Asociamos una funcion al boton anterior" onclick="attachEvent()" />
+<p>Pulsar el botón derecho asocia un evento onclick al primero, volviendolo funcional, además de modificar su contenido.
+	Clickarlo antes no suponía nada, mientras que tras pulsar el botón derecho, un click del botón izquierdo nos recuerda su funcionalidad.
+</p>
 </body>
 </html>

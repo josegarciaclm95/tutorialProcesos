@@ -1,96 +1,128 @@
 <html>
 <head>
-	<title></title>
+	<title>Devolución de funciones</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
-		/*
-		//Descomentar para los ejemplos 1 y 2
+		
+		//Caso 1.
 		function doProcess(a,b){
 			function mostrarSuma(){
 				alert("Suma="+(a+b).toString());
 			}
-
 			function mostrarResta(){
 				alert("Resta="+(a-b).toString());
 			}
 			mostrarSuma();
-			//1- si ponemos la funcion con () entonces ejecuta la funcion y devuelve lo que devuelva la funcion
-			//return mostrarResta(); 
-		
-			//2- ponemos la funcion sin ()
-			//return mostrarResta;
+			return mostrarResta(); 
 		}
-		*/
-		//1-Llamada para el primer ejemplo
-		//doProcess(10,20);
-		
-		/*
-		//2-Codigo del segundo ejemplo
-		var a=doProcess(10,20);
-		alert("despues del return");
-		a(); //ahora estamos llamando a la funcion del return caso 2: ejecutaria la funcion muestraResta
-		*/
-
-		//3-Devolver una funcion anonima
-		/*
-		function doProcess(a,b){
+		function callDoProcess(){
+			alert(doProcess(10,20));
+		}
+		//Caso 2.
+		function doProcess2(a,b){
 			function mostrarSuma(){
 				alert("Suma="+(a+b).toString());
 			}
-	
+			function mostrarResta(){
+				alert("Resta="+(a-b).toString());
+			}
 			mostrarSuma();
+			return mostrarResta;
+		}
+		function callDoProcess2(){
+			var a = doProcess2(10,20);
+			alert("Llamada a la función que devuelve doProcess2");
+			a(); 
+		}
 
+		//Caso 3
+		function doProcess3(a,b){
+			function mostrarSuma(){
+				alert("Suma="+(a+b).toString());
+			}
+			mostrarSuma();
 			return function () {
 				alert("Resta="+(a-b).toString());
 			}
 		}
-
-		var a=doProcess(20,30);
-		a();
-		*/
-		/*
+		function callDoProcess3(){
+			var a = doProcess3(10,20);
+			alert("Llamada a la función anónima devuelta");
+			a(); 
+		}		
+		
 		//4-Devolver funcion anonima con parametros
-		function doProcess(a,b){
+		function doProcess4(a,b){
 			function mostrarSuma(){
 				alert("Suma="+(a+b).toString());
 			}
-	
 			mostrarSuma();
-
 			return function (c,d) {
 				alert("Resta="+(c-d).toString());
 			}
 		}
-
-		var a=doProcess(20,30);
-		//Ahora tengo que pasarle parametros a la funcion anonima
-		a(100,30);
-		//Comprueba lo que ocurre si la llamada fuera a();
-		*/
+		function callDoProcess4(){
+			var a = doProcess4(10,20);
+			alert("Llamada a función anónima con parámetros 100 y 30");
+			a(100,30);
+			//a(); 
+		}			
 		
-		/*
 		//5-Redefinir el contenido de una funcion
-		function doProcess(a,b){
+		function doProcess5(a,b){
 			function mostrarSuma(){
 				alert("Suma="+(a+b).toString());
 			}
-	
 			mostrarSuma();
-
-			doProcess= function (a,b) {
+			doProcess5 = function (a,b) {
 				alert("Resta="+(a-b).toString());
 			}
 		}
+		function callDoProcess5(){
+			alert("Primera llamada a doProcess con valores 10 y 20");
+			doProcess5(10,20);
+			alert("Segunda llamada a doProcess con valores 30 y 55");
+			doProcess5(30,55);
+		}
 
-		doProcess(10,20);
-		doProcess(30,55);
-		doProcess=function(a,b){
+		doProcess6 = function(a,b){
 			alert("Suma="+(a+b).toString());
 		}
-		doProcess(5,70);
-		*/
+		function callDoProcess6(){
+			alert("Llamada a función redefinida con parámetros 5 y 70");
+			doProcess6(5,70);
+		}
 	</script>
 </head>
 <body>
-
+<p>Si escribimos una función seguida de (), ya sean unos parentesis vacios o con argumentos, estaremos realizando una llamada a la función. <br/>
+	Si escribimos unicamente su nombre, estaremos accediendo a la función como tal y podremos devolverla como resultado de una función,
+	pasarla a una función tipo filter, map, etc. Los siguientes botones accionan distintas versiones de la misma función, donde jugamos con las funciones anidadas, anónimas, etc.<br/>
+	En todos los casos, salvo en el último, tendremos una función doProcess, y dos funciones, mostrarSuma y mostrarResta. Jugaremos con ellas para que doProcess
+	devuelva el resultado de una función, la propia función, una función anónima con la misma funcionalidad, etc.
+</p>
+<p>Caso 1. doProcess devuelve el resultado que devuelva mostrarResta</p>
+<input type="button" value="doProcess devuelve mostrarResta()" onclick="callDoProcess();">
+Como mostrarResta() no devuelve nada (devuelve void en términos de otros lenguajes) el alert del resultado es un 'undefined'.
+<p>Caso 2. doProcess devuelve la función mostrarResta</p>
+<input type="button" value="doProcess devuelve mostrarResta" onclick="callDoProcess2();">
+La función mostrarResta devuelta 'recuerda' los parámetros a y b que se pasaron a doProcess, por eso la podemos llamar vacía sin problemas.
+<p>Caso 3. doProcess devuelve función anónima con misma funcionalidad que mostrarResta</p>
+<input type="button" value="doProcess devuelve función anónima" onclick="callDoProcess3();"> 
+Situación similar respecto a la llamada sin parámetros. En el momento en que se define toma los a y b que recibe doProcess.
+<p>Caso 4. doProcess devuelve función anónima que acepta dos parámetros.</p>
+<input type="button" value="doProcess devuelve función anónima con dos parámetros" onclick="callDoProcess4();">
+Dado que los argumentos que recibe la función anónima son distintos que los que recibe doProcess, si la llamamos sin argumentos no tiene nada con lo que operar
+y lo que devuelve no es un número, Not a Number, NaN.
+<p>Caso 5. doProcess es sobrescrita dentro de su propia llamada con una función anónima.</p>
+<input type="button" value="doProcess redefinida en su llamada" onclick="callDoProcess5();">
+En este caso la llamada a doProcess provoca que esta sea modificada para realizar una resta solamente. Por ello, dos llamadas seguidas a la función devolverán resultados
+distintos. La primera calculará la suma y modificara doProcess, por lo que la segunda llamada será recibida por la versión modificada 
+y se realizará la resta.
+<p>Caso 6. doProcess es redefinida con una función anónima.</p>
+<input type="button" value="doProcess redefinida con anónima" onclick="callDoProcess6();">
+Ahora doProcess ha sido modificada con una función anónima para que haga solo una suma.
 </body>
 </html>

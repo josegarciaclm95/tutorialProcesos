@@ -1,6 +1,9 @@
 <html>
 <head>
-	<title></title>
+	<title>Array de funciones</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		var ary=[];
 		ary[0]=function(){
@@ -13,9 +16,9 @@
 		ary[3]=function(){
 			alert("Tercera");
 		}
+		ary.push("Hola");
 		//1-Un modo de invocar una funcion de un array
 		//ary[1]();
-
 		//2-
 		for(var i=0;i<ary.length;i++)
 		{
@@ -28,9 +31,13 @@
 				alert("No es una funcion");
 			}
 		}
+		alert(ary);
 	</script>
 </head>
 <body>
-
+	<p>Como una función es un objeto, puede almacenarse en un contenedor de objetos. Disponemos de un array de objetos que contiene tres funciones,
+		cada una realizando un alert con su posición en el array, y un entero. Llamaremos a cada función del array con un bucle, pero dado que los arrays en javascript 
+		no tienen tipo, tenemos que comprobar para cada elemento si es realmente una función antes de llamarlo.
+	</p>
 </body>
 </html>

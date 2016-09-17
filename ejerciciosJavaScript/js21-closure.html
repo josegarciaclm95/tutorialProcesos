@@ -1,29 +1,40 @@
 <html>
 <head>
-	<title></title>
+	<title>Closure</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		//Closure
+		var interna = -1;
 		function inicial(n){
 			var actual=0;
 			var max=n;
-
 			alert("Soy la funcion inicial");
-
 			return function(){				
 				return (actual < max) ? actual++ : actual;
 			}
 		}
-
-		var interna;
+		function clickButton(){
+			interna = interna == -1 ? inicial(2) : interna;
+			alert(interna());
+		}
+		/*
 		interna=inicial(2);
 		alert(interna());
 		alert(interna());
 		alert(interna());
 		alert(interna());
 		alert(interna());
+		*/
+
 	</script>
 </head>
 <body>
+	<p>El primer click almacenará en la variable "interna" una función que incrementa un entero
+		desde 0 hasta el valor pasado como argumento. Posteriores clicks llamarán a la función interna que incrementará el entero
+		que almacena hasta llegar al tope. En este caso el tope es 2.</p>
+<input type="button" value="Inicial (primer click) / Interna (posteriores)" onclick="clickButton();">
 
 </body>
 </html>

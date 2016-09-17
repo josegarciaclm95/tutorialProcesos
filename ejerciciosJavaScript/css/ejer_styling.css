@@ -57,7 +57,7 @@ li a {
   color:#583D07; 
 }
 
-input[type=button] {
+button, input[type=button] {
     font-family: 'Open Sans',Trebuchet MS,Arial,sans-serif;
     height: 40px;
 
@@ -67,3 +67,10 @@ input[type=button] {
     font-family: Consolas,monaco,monospace;
     padding-left: 1.8em;
 }
+
+/*
+p {
+    width: 75%;
+    text-align: center;
+}
+*/
