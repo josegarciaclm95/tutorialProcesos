@@ -1,6 +1,9 @@
 <html>
 <head>
 	<title>Funciones 2</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		//Función sencilla
 		function MostrarMsg(){
@@ -38,7 +41,11 @@
 <body>
 	<input type="button" value="Mostrar Mensaje" onclick="MostrarMsg();">
 	<input type="button" value="Mostrar Suma 10+20" onclick="Sumar(10,20);">
-	<input type="button" value="Mostrar Suma numero variable de argumentos" onclick="Sumar2(10,20,3,5,100);">
-	<input type="button" value="Mostrar Resta" onclick="alert('Resta='+Restar(10,20));">
+	<input type="button" value="Mostrar Suma numero variable de argumentos" onclick="Sumar2(10,20,30,50,100);">
+	<input type="button" value="Mostrar Resta 10-20" onclick="alert('Resta='+Restar(10,20));">
+	<p>
+		El botón "Mostrar Suma numero variable de argumentos" llama a una función que utiliza arguments con los valores
+		10, 20, 30, 50 y 100
+	</p>
 </body>
 </html>

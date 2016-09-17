@@ -1,42 +1,46 @@
 <html>
 <head>
-	<title></title>
+	<title>Funciones como parámetros</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		function RealizarProceso(a,b,d){
-			alert("Suma="+(a+b).toString());
+			alert("Suma="+(a+b));
 			d(a,b);
 		}
 		function MostrarResta(a,b){
-			alert("Resta="+(a-b).toString());
+			alert("Resta="+(a-b));
 		}
-		/*
-		//1-Mostramos el funcionamiento normal:
-		RealizarProceso(10,20,30);
-		MostrarResta(10,20);
-		*/
-
 		
+		//1-Mostramos el funcionamiento normal:
+		//RealizarProceso(10,20,30);
+		//MostrarResta(10,20);
 		//2-Agregamos una nueva funcion
 		function MostrarMultiplicacion(a,b){
-			alert("Multiplicacion="+(a*b).toString());	
+			alert("Multiplicacion="+(a*b));	
 		}
-		/*
+		
 		//Ojo antes de probar el siguiente ejemplo hay
 		//que descomentar la linea de la llamada a d(a,b)
 		//en la funcion RealizarProceso
 		RealizarProceso(10,20,MostrarResta);
-		*/
+		
 
-		/*
+		
 		//3-Ahora simplemente cambiamos la llamada a resta
 		//por una llamada a multiplicacion
 		RealizarProceso(10,20,MostrarMultiplicacion);
-		*/
+		
 
 		
 	</script>
 </head>
 <body>
-
+	<p>Dado que una función se puede tratar como un objeto, podemos pasarla como argumento. En este caso se ha pasado la función MostrarResta
+		 y MostrarMultiplicación (en llamadas distintas) a la función RealizarProceso, donde se ha hecho una suma y una llamada a la función pasada por parámetros.
+	</p>
+	<p>Primera llamada. Se muestra "Suma = 30" y "Resta = -10"</p>
+	<p>Segunda llamada. Se muestra "Suma = 30" y "Multiplicación = 200"</p>
 </body>
 </html>

@@ -1,6 +1,9 @@
 <html>
 <head>
 	<title>Ejemplos de funciones anonimas</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		//Function literal notation
 		//Function object
@@ -35,8 +38,14 @@
 </head>
 <body>
 	<input type="button" value="Mostrar mensaje" onclick="f1()">
-	<input type="button" value="Mostrar suma" onclick="f2(5,2)">
+	<input type="button" value="Mostrar suma 5 + 2" onclick="f2(5,2)">
 	<input type="button" value="Mostrar suma de parametros" onclick="f3(10,20,30,40,50)">
-	<input type="button" value="Mostrar resta" onclick="alert('Resta='+f4(5,2).toString())">
+	<input type="button" value="Mostrar resta 5 - 2" onclick="alert('Resta='+f4(5,2))">
+	<p>
+		Estas funciones hacen lo mismo que las declaradas en el ejercicio "Funciones (1)". La diferencia radica en su declaración.
+		El botón "Mostrar suma de parámetros" llama a una función que utiliza arguments con los valores
+		10, 20, 30, 40 y 50
+	</p>
+
 	</body>
 </html>

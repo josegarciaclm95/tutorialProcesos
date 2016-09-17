@@ -1,43 +1,46 @@
 <html>
 <head>
-	<title></title>
+	<title>Funciones anónimas</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		//1-comprobar lo que ocurre al comentar o no comentar
 		//la llamada a la funcion ShowMessage()
-		/*
+		
 		function ShowMessage(){
 			alert("mensaje");
 		}
 		//Llamada
-		ShowMessage();
-		*/
+		//ShowMessage();
+		
 
-		/*
+		
 		//2-Funciones que se llaman a si mismas
 		(function(){
 			alert("Mensaje funcion que se llama a si misma")
 		})();
 		//Lo que ocurre es que ehmos definido una funcion anonima que
 		//se llama a si misma 
-		*/
+		
 
 		/*
 		//3-Otro ejemplo de funcion que se llama a si misma
 		//self-invoking function
-		//Partimos de una funcion normal
+		//Partimos de una funcion normal */
 		function MostrarSuma(a,b){
 			alert("Suma="+(a+b).toString());
 		}
 		//y su llamada
-		MostrarSuma(10,20);
+		MostrarSuma(30,40);
 		//Se transforma en self-invoking function:
 		(function (a,b){
 			alert("Suma="+(a+b).toString());
 		})(30,40);
 		//comprueba el resultado
-		*/
+		
 
-		/*
+		
 		//4-Self-invoking function con numero ilimitado de parametros
 		(function(){
 			var s=0;
@@ -47,15 +50,15 @@
 			}
 			alert("Suma="+s.toString());
 		})(10,20,30,40);
-		*/
+		
 
-		/*
+		
 		//5-Self-invoking con valor de retorno
 		//Partimos de una funcion con nombre
 		function ObtenerDiferencias(a,b){
 			return (a-b);
 		}
-		var c=ObtenerDiferencias(10,20);
+		var c=ObtenerDiferencias(100,200);
 		alert(c);
 		//Ahora la transformamos en self-invoking
 		var c=(function (a,b){
@@ -67,11 +70,28 @@
 		alert((function (a,b){
 			return (a-b);
 		}) (100,200));
-		*/
+		
 
 	</script>
 </head>
 <body>
-
+<p>
+	1. Si descomentamos la llamada a ShowMessage que hay después de su declaración, se llama a esa función y se muestra su alert.
+</p>
+<p>	
+	2. Como una función se puede tratar como un objeto, se puede declarar al vuelo, y llamarla en ese momento. <br>
+	<span id="example">(function(){hago cosas})();</span>
+</p>
+<p>
+	3. Una misma función definida de forma normal y de forma anónima. Ambas realizan la suma de 30 y 40 y lo muestran en sendos alerts.
+</p>
+<p>
+	4. Función anónima llamándose a sí misma y haciendo uso de arguments para manejar número variable de argumentos. Se realiza la suma de 
+	10, 20, 30 y 40.
+</p>
+<p>
+	5. Situación similar al punto 3, en este caso devolviendo dichas funciones, normal y anónima, un valor que se almacena y se muestra. Se realiza
+	la resta de 100 y 200 tres veces.	
+</p>
 </body>
 </html>

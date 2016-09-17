@@ -1,6 +1,9 @@
 <html>
 <head>
-	<title></title>
+	<title>Filter</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		function esPar(v,i,array){
 			return(v%2==0)?true:false;
@@ -8,13 +11,17 @@
 
 		//1-Funcion filter
 		var a=[2,4,6,8,5,10,12];
+		alert(a);
 		var b=a.filter(esPar);
+		alert(b);
 		//Inspecciona los valores de a y b en la consola
 		//Muestra el valor en un alert
 
 	</script>
 </head>
 <body>
-
+	<p> Filter es una función similar a every que "cuela" los elementos de una colección que no cumplen la condición del predicado pasado como 
+		argumento. En este caso, le damos el array [2,4,6,8,5,10,12] y nos lo devuelve "colado" habiendo dejado solo los pares 
+		[2,4,6,8,12], ya que el predicado que hemos pasado devuelve true para numeros pares.
 </body>
 </html>

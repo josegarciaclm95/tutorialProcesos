@@ -1,20 +1,29 @@
 <html>
 <head>
-	<title></title>
+	<title>Map</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		var a=[2,4,6,8,5,10,12];
 
 		function realizarProceso(v,i,ary){
 			return v*v;
 		}
-
+		alert(a);
 		//comprobar valor de a en la consola
 		var b=a.map(realizarProceso);
 		//comprobar valor de b
+		alert(a);
+		alert(b);
 
 	</script>
 </head>
 <body>
-
+	<p>
+		La función map es similar a forEach, en el sentido de que aplica una función a los elementos de un array, salvo porque forEach
+		altera los elementos de una colección y map devuelve una colección nueva con la función aplicada sin afectar a la colección de entrada.  
+		La función aplicada en este caso eleva al cuadrado cada elemento.
+	</p>
 </body>
 </html>

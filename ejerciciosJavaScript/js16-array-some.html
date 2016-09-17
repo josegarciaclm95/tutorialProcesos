@@ -1,6 +1,9 @@
 <html>
 <head>
-	<title></title>
+	<title>Some</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
 		function esPar(v, i, ary){
 			return(v%2==0)?true:false;
@@ -9,12 +12,24 @@
 
 		//every devolvería cierto si todos los elementos cumplen la condicion esPar
 		//some devuelve true si alguno cumple
+		alert(a);
+		alert(a.some(esPar));
+		a = [9,37,15,4,11]
+		alert(a);
+		alert(a.some(esPar));
+		a = [9,37,15,11]
+		alert(a);
 		alert(a.some(esPar));
 		//Cambia los valores de la colección para comprobar el resultado
 
 	</script>
 </head>
 <body>
-
+	<p>Con el uso de la función some, que recibe como argumento una función, comprobamos si alguno de los elementos de un array
+		satisface la condición codificada en la función parámetro. En este caso, si algún elemento del array [9,37,15,4,4,11]
+		es par. Hay dos elementos que si lo son, por tanto some devuelve "true".<br>
+		Si eliminamos uno de los elementos [9,37,15,4,11], some sigue devolviendo true. En el momento que no queda ningún elemento par, 
+		some devuelve false.
+	</p>
 </body>
 </html>

@@ -1,14 +1,17 @@
 <html>
 <head>
-	<title></title>
+	<title>Arrays</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejer_styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<script type="text/javascript">
-		/*
+		
 		//1-definir un array
 		var a=[2,26,38,12,6,8];
-		alert(a.length);
-		*/
+		alert("Size " + a.length + " -> " + a);
+		
 
-		/*
+		
 		//2-funcion every
 		function esPar(v,i,array){
 			return(v%2==0)?true:false;
@@ -16,19 +19,25 @@
 		var a=[2,26,38,12,6,8];
 		alert(a.every(esPar));
 		//Comprueba el resultado para diferentes valores de a
-		*/
 		
-		/*
+		
+		
 		//3-Ahora como funcion anonima
 		alert([2,26,38,12,7,8].every(
 			function (v,i,array){
 			return(v%2==0)?true:false;
 		}));
-		*/
+		
 
 	</script>
 </head>
 <body>
-
+	<p>Se muestra el array [2,26,38,12,6,8]</p>
+	<p>Con el uso de la función every, que recibe como argumento una función, comprobamos si los elementos de un array
+		satisfacen la condición codificada en la función parámetro. En este caso, comprobamos que los elementos del array anterior
+		sean pares. En este caso son todos pares y se devuelve "true".<br>
+		Repetimos el procedimiento sobre el array [2,26,38,12,7,8] y pasando la función parámetro como función anónima. En este caso hay un elemento
+		que no satisface la condición. Como not every elemento del array la cumple, every devuelve "false".
+	</p>
 </body>
 </html>

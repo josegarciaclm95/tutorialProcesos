@@ -40,5 +40,10 @@
             </ul>
         </nav>
         </div>
+        <img id="picture"/>
+        <script type="text/javascript">
+            var pics = {1:"img/problemg.jpg", 2:"img/pattern.jpg", 3:"img/pattern2.jpg", 4:"img/pattern3.jpg", 5:"img/java.jpg"};
+            document.getElementById("picture").src = pics[Math.round(Math.random()*4+1)]
+        </script>
     </body>
 </html>
