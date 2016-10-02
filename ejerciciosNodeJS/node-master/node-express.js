@@ -1,4 +1,4 @@
-//1- primer ejemplo con express
+//1- primer ejemplo con express Hecho
 /*
 var fs=require("fs");
 var config=JSON.parse(fs.readFileSync("config.json"));
@@ -17,7 +17,7 @@ console.log("Servidor escuchando en "+host+":"+port);
 app.listen(port,host);
 */
 
-//2- Devolver la cadena indicada en la url con
+//2- Devolver la cadena indicada en la url con - Hecho. Si se pone algo tipo /hola/jose/maria no dice hola jose/maria
 //este formato /hola/juanito
 /*
 var fs=require("fs");
@@ -38,13 +38,13 @@ app.get("/hola/:text",function(request,response){
 });
 console.log("Servidor escuchando en "+host+":"+port);
 app.listen(port,host);
-*/
+*/ 
 
-//3-Devolver los valores según un parámetro indicado
+//3-Devolver los valores según un parámetro indicado - Hecho
 //en la url
 //Puedes utilizar console.log para que el servidor muestre mensajes
 //Observa que el servidor acepta tres rutas / /hola/pepito y /user/numero
-/*
+
 var fs=require("fs");
 var config=JSON.parse(fs.readFileSync("config.json"));
 var host=config.host;
@@ -82,4 +82,5 @@ app.get("/user/:id",function(request,response){
 	response.send
 })
 app.listen(port,host);
-*/
+console.log("Servidor escuchando en "+host+":"+port);
+

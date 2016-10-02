@@ -13,3 +13,4 @@ try {
 } catch (err) {
     console.log("Has intentado llamar a funcion privada sin exportar");
 }
+// Hecho

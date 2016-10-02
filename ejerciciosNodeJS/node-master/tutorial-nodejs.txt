@@ -8,7 +8,7 @@
 	 actualizar módulos: npm update underscore
 	 buscar módulos: npmjs.org
 	 instalar módulos: npm install nombre-module
-7. Instalar express
+*7. Instalar express
 	npm install express
 	Realizar todos los ejemplos del archivo node-express.js
 *8. Conectar a GitHub

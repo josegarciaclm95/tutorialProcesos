@@ -1,5 +1,5 @@
 
-//1- Conectar con el respositorio
+//1- Conectar con el respositorio - Hecho
 
 /*
 var https=require("https");
@@ -27,7 +27,7 @@ var request=https.request(options,function(response){
 request.end();
 console.log("fin");
 */
-//2- Filtrar el resultado para obtener solamente
+//2- Filtrar el resultado para obtener solamente - Hecho
 //el número de repositorios
 /*
 var https = require("https");
@@ -61,7 +61,7 @@ var request = https.request(options, function (response) {
 request.end();
 */
 /*
-//3-Este ejemplo crea una coleccion llamada repos donde vamos a introducir
+//3-Este ejemplo crea una coleccion llamada repos donde vamos a introducir - Hecho
 //solamente el nombre y la descripcion de cada repositorio
 
 var https=require("https");
@@ -95,7 +95,7 @@ var request=https.request(options,function(response){
 request.end();
 */
 
-//4- Reutilizar el código transformándolo en una función
+//4- Reutilizar el código transformándolo en una función - Hecho
 
 var https=require("https");
 

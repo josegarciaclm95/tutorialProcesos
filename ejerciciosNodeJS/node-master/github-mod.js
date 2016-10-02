@@ -1,7 +1,7 @@
 var https=require("https");
 
 //var username="jgallud";
-
+// Hecho
 function getRepos(username,callback){
 
 	var options={
@@ -10,7 +10,7 @@ function getRepos(username,callback){
 		method:"GET",
 		headers: {'user-agent': 'node.js'}
 	}
-
+//Sin la linea de headers, fallaba al hacer la llamada
 	var request=https.request(options,function(response){
 		var body="";
 		response.on("data",function(chunk){
